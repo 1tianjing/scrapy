@@ -1,0 +1,65 @@
+2018-06-27 16:25:17 [scrapy.utils.log] INFO: Scrapy 1.5.0 started (bot: jobboleproject)
+2018-06-27 16:25:17 [scrapy.utils.log] INFO: Versions: lxml 3.5.0.0, libxml2 2.9.3, cssselect 1.0.3, parsel 1.4.0, w3lib 1.19.0, Twisted 18.4.0, Python 3.5.2 (default, Nov 23 2017, 16:37:01) - [GCC 5.4.0 20160609], pyOpenSSL 18.0.0 (OpenSSL 1.1.0h  27 Mar 2018), cryptography 2.2.2, Platform Linux-4.13.0-45-generic-x86_64-with-Ubuntu-16.04-xenial
+2018-06-27 16:25:17 [scrapy.crawler] INFO: Overridden settings: {'LOG_FILE': 'logs/jobboleproject/jobbole/9ea330fa79e311e8b553080027272c30.log', 'ROBOTSTXT_OBEY': True, 'BOT_NAME': 'jobboleproject', 'NEWSPIDER_MODULE': 'jobboleproject.spiders', 'SPIDER_MODULES': ['jobboleproject.spiders']}
+2018-06-27 16:25:17 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.corestats.CoreStats']
+2018-06-27 16:25:17 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['jobboleproject.middlewares.RandomUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'jobboleproject.middlewares.JobboleprojectDownloaderMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2018-06-27 16:25:17 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2018-06-27 16:25:18 [twisted] CRITICAL: Unhandled error in Deferred:
+2018-06-27 16:25:18 [twisted] CRITICAL: 
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/defer.py", line 1386, in _inlineCallbacks
+    result = g.send(result)
+  File "/usr/local/lib/python3.5/dist-packages/scrapy/crawler.py", line 80, in crawl
+    self.engine = self._create_engine()
+  File "/usr/local/lib/python3.5/dist-packages/scrapy/crawler.py", line 105, in _create_engine
+    return ExecutionEngine(self, lambda _: self.stop())
+  File "/usr/local/lib/python3.5/dist-packages/scrapy/core/engine.py", line 70, in __init__
+    self.scraper = Scraper(crawler)
+  File "/usr/local/lib/python3.5/dist-packages/scrapy/core/scraper.py", line 71, in __init__
+    self.itemproc = itemproc_cls.from_crawler(crawler)
+  File "/usr/local/lib/python3.5/dist-packages/scrapy/middleware.py", line 58, in from_crawler
+    return cls.from_settings(crawler.settings, crawler)
+  File "/usr/local/lib/python3.5/dist-packages/scrapy/middleware.py", line 36, in from_settings
+    mw = mwcls.from_crawler(crawler)
+  File "/usr/local/lib/python3.5/dist-packages/scrapy/pipelines/media.py", line 68, in from_crawler
+    pipe = cls.from_settings(crawler.settings)
+  File "/usr/local/lib/python3.5/dist-packages/scrapy/pipelines/images.py", line 98, in from_settings
+    return cls(store_uri, settings=settings)
+  File "/usr/local/lib/python3.5/dist-packages/scrapy/pipelines/images.py", line 52, in __init__
+    download_func=download_func)
+  File "/usr/local/lib/python3.5/dist-packages/scrapy/pipelines/files.py", line 276, in __init__
+    self.store = self._get_store(store_uri)
+  File "/usr/local/lib/python3.5/dist-packages/scrapy/pipelines/files.py", line 315, in _get_store
+    return store_cls(uri)
+  File "/usr/local/lib/python3.5/dist-packages/scrapy/pipelines/files.py", line 48, in __init__
+    self._mkdir(self.basedir)
+  File "/usr/local/lib/python3.5/dist-packages/scrapy/pipelines/files.py", line 77, in _mkdir
+    os.makedirs(dirname)
+  File "/usr/lib/python3.5/os.py", line 231, in makedirs
+    makedirs(head, mode, exist_ok)
+  File "/usr/lib/python3.5/os.py", line 241, in makedirs
+    mkdir(name, mode)
+NotADirectoryError: [Errno 20] Not a directory: '/tmp/jobboleproject-1530086648-n4spy2ul.egg/jobboleproject'

@@ -1,0 +1,14 @@
+setup.py
+jobboleproject/__init__.py
+jobboleproject/items.py
+jobboleproject/middlewares.py
+jobboleproject/pipelines.py
+jobboleproject/settings.py
+jobboleproject/spiders/__init__.py
+jobboleproject/spiders/crawlJobbole.py
+jobboleproject/spiders/jobbole.py
+project.egg-info/PKG-INFO
+project.egg-info/SOURCES.txt
+project.egg-info/dependency_links.txt
+project.egg-info/entry_points.txt
+project.egg-info/top_level.txt
